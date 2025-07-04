@@ -72,7 +72,7 @@ src: url('/fonts/JetBrainsMono.ttf');
 
 input[type=range] {
     -webkit-appearance: none;
-    -moz-appearance: none;    /* Firefox */
+    -moz-appearance: none;
     width: 100%;
     background: transparent;
 }
