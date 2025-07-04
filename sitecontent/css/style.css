@@ -26,7 +26,7 @@ body {
 .main-container {
   /* background-color: rgba(0, 0, 0, 0.279); */
   width: 100%; /* Full width on mobile */
-  max-width: 750px; /* Limit on desktop */
+  max-width: 768px; /* Limit on desktop */
   align-items: center;
   margin: 0 auto;
   margin-top: 50px;
@@ -35,6 +35,7 @@ body {
 .transparent-content {
   width: 100%;
   padding: 20px;
+  align-items: center;
 }
 
 /* Logo styling */
@@ -57,7 +58,7 @@ body {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.blog-content .post-title {
+.post-title {
   background-color: #ffffff39;
   padding: 12px;
   padding-left: 12px;
@@ -130,7 +131,7 @@ body {
   max-height: 0px;
 }
 
-.logo:hover .logo {
+div:hover .ploink {
   animation: ploink 0.2s ease;
 }
 
@@ -164,3 +165,90 @@ body {
   z-index: -10  ;
   opacity: 0.5;
 }
+
+/* SIDEBAR */
+
+.sidebar {
+  position: fixed;
+  bottom: 61px;
+  left: 24px;
+  background-image: linear-gradient(-45deg, #96b6e8d7,rgba(144, 178, 144, 0.875));
+  width: calc((100% - 768px)/2 - 36px);
+  height: 50%;
+  min-width: 50px;
+  min-height: 50px;
+  z-index: 10;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Collapsed state */
+.sidebar.sidebar-collapsed {
+  width: 50px;
+  height: 50px;
+}
+
+/* Toggle button */
+.sidebar-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  transition: all 0.3s ease;
+  z-index: 11;
+  color: white;
+}
+
+.sidebar-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar content wrapper */
+.sidebar-content {
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hidden state */
+.sidebar-collapsed .sidebar-content {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Sidebar on hover */
+.sidebar-collapsed:hover .sidebar-content {
+  opacity: 0.8; 
+  visibility: visible;
+}
+
+.sidebar-collapsed:hover {
+  width: 155px;
+}
+
+.sidebar-collapsed .sidebar-toggle-btn {
+  left: 10px;
+}
+
+.sidebar-collapsed:hover .sidebar-content .post-title {
+  padding-left: 45px;
+}
+
+/* Under Construction */
+.construction {
+  position: fixed;
+  top: 0px;
+  width: 300px;
+  right: calc(50% - 130px);
+  border-radius: 0px 0px 8px 8px;
+  text-align: center;
+}
+

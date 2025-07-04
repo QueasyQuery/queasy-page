@@ -6,7 +6,7 @@ src: url('/fonts/JetBrainsMono.ttf');
 }
 
 #musicplayer{ 
-    font-family: 'JetBrains';
+    font-family: 'JetBrains', monospace;
     font-weight:bold;
     height:37px;
     width:100%;
@@ -56,12 +56,14 @@ src: url('/fonts/JetBrainsMono.ttf');
 .current-time{  
     padding-right:5px;
     margin-right: 3px; 
+    font-family:'JetBrains', monospace;
     filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)  drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);
     
 }
  
 .total-duration{
     padding-left:5px;
+    font-family:'JetBrains', monospace;
     filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)  drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);
 }
 .ctrlimg {
@@ -194,7 +196,6 @@ input[type=range].volume_slider::-moz-range-thumb {
   width: 37px;
   height: 37px;
   object-fit: cover;
-  border-radius: 4px;
 }
 
 /*MP mobile handling*/

@@ -1,6 +1,7 @@
 // Auto-initialize all rows when page loads
 document.addEventListener('DOMContentLoaded', function() {
   initializeRowCollapse();
+  initializeSidebar();
 });
 
 function initializeRowCollapse() {
@@ -74,5 +75,63 @@ function toggleRowContent(row, button, blogDivs) {
       }
     });
     button.innerHTML = '+';
+  }
+}
+
+// SIDEBAR
+
+function initializeSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  // Skip if already initialized
+  if (sidebar.classList.contains('sidebar-initialized')) return;
+  
+  // Mark as initialized
+  sidebar.classList.add('sidebar-initialized');
+  
+  // Create toggle button
+  const button = document.createElement('button');
+  button.className = 'sidebar-toggle-btn';
+  button.innerHTML = '☰'; // Hamburger menu icon
+  button.setAttribute('aria-label', 'Toggle sidebar');
+  
+  // Create wrapper for collapsible content
+  const wrapper = document.createElement('div');
+  wrapper.className = 'sidebar-content';
+  
+  // Move all existing content into wrapper
+  const children = Array.from(sidebar.children);
+  children.forEach(child => {
+    wrapper.appendChild(child);
+  });
+  
+  // Add button and wrapper back to sidebar
+  sidebar.appendChild(button);
+  sidebar.appendChild(wrapper);
+  
+  // Start collapsed
+  sidebar.classList.add('sidebar-collapsed');
+  
+  // Add click handler
+  button.addEventListener('click', function() {
+    toggleSidebar(sidebar, button, wrapper);
+  });
+}
+
+function toggleSidebar(sidebar, button, wrapper) {
+  const isCollapsed = sidebar.classList.contains('sidebar-collapsed');
+  
+  if (isCollapsed) {
+    // Expand
+    sidebar.classList.remove('sidebar-collapsed');
+    wrapper.style.opacity = '';
+    wrapper.style.visibility = '';
+    button.innerHTML = '×';
+  } else {
+    // Collapse
+    sidebar.classList.add('sidebar-collapsed');
+    // Remove inline styles to let CSS handle it
+    wrapper.style.opacity = '';
+    wrapper.style.visibility = '';
+    button.innerHTML = '☰';
   }
 }
