@@ -1,0 +1,165 @@
+/* Basic CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*font*/
+@font-face {
+font-family: 'JetBrains';
+src: url('/fonts/JetBrainsMono.ttf');
+}
+
+/* Background image styling */
+body {
+  background-image: linear-gradient(-45deg, #00173c,#002c00);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  image-rendering: pixelated;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Center container styling */
+.main-container {
+  /* background-color: rgba(0, 0, 0, 0.279); */
+  width: 100%; /* Full width on mobile */
+  max-width: 750px; /* Limit on desktop */
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.transparent-content {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Logo styling */
+.logo {
+  margin-bottom: 20px;
+  image-rendering: pixelated;
+  transition: transform 0.3s;
+  width: 100%;
+  height: auto;
+  min-width: 120px; /* Adjust as needed */
+}
+
+/* Blog content styling */
+.blog-content {
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-45deg, #96b6e8d7,rgba(144, 178, 144, 0.875));
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.blog-content .post-title {
+  background-color: #ffffff39;
+  padding: 12px;
+  padding-left: 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  border-radius: 8px;
+}
+
+.blog-content p {
+  padding: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*Link breaking*/
+.blog-content a {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Blog post styling */
+.post-title {
+  font-size: 24px;
+  font-family: "JetBrains", monospace;
+  font-weight: bold;
+  color: #022002;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-family: "JetBrains", monospace;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.row {
+  position: relative;
+}
+
+.row-collapse-btn {
+  position: absolute;
+  top: 12px;  
+  right: 12px;
+  background: rgba(0, 15, 91, 0.355);
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: white;
+}
+
+.row-collapse-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.collapsible-content {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.3s ease;
+}
+
+.collapsed .collapsible-content {
+  max-height: 0px;
+}
+
+.logo:hover .logo {
+  animation: ploink 0.2s ease;
+}
+
+/* Special treatment for stuff-img because I'm a good coder */
+.stuffimg .row-collapse-btn {
+  right: 24px;
+}
+
+.stuffimg .post-title {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+@keyframes ploink {
+  0% { transform: translateY(0) rotate(0); }
+  35% {transform: rotate(2deg); }
+  50% { transform: translateY(-10%) rotate(0deg)} /* Adjust -10px to control jump height */
+  65% {transform: rotate(-2deg); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+#sketch {
+  position: fixed;
+  top: -20%;
+  left: -20%;
+  width: 140vw;
+  height: 140vh;
+  display: block;
+  margin: 0 auto;
+  z-index: -10  ;
+  opacity: 0.5;
+}
