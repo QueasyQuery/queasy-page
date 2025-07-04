@@ -30,6 +30,7 @@ src: url('/fonts/JetBrainsMono.ttf');
 }
  
 .controls{
+    height: 37px;
     font-family: 'JetBrains';
     font-size:12px; /* size of controls */
     text-align:center;
@@ -44,6 +45,7 @@ src: url('/fonts/JetBrainsMono.ttf');
 }
 
 .seeking{
+    height: 37px;
     width:75%;
     background: transparent;/* background color of seeking bar */
     display:flex;
@@ -147,6 +149,7 @@ input[type=range].volume_slider::-moz-range-thumb {
 
 
 .slider_container {  
+  height: 37px;
   width: 15%;       /* width of volume seeker */
   display: flex;
   justify-content: center;
@@ -157,6 +160,8 @@ input[type=range].volume_slider::-moz-range-thumb {
 /* Marquee */
     
 .marquee-container {
+  width: 100%;
+  height: 37px;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
@@ -178,6 +183,7 @@ input[type=range].volume_slider::-moz-range-thumb {
 }
 
 .marquee-outer {
+    height: 37px;
     background-color: rgba(255, 255, 255, 0.397);
     border-radius: 6;
     max-width: 250px;
@@ -189,4 +195,30 @@ input[type=range].volume_slider::-moz-range-thumb {
   height: 37px;
   object-fit: cover;
   border-radius: 4px;
+}
+
+/*MP mobile handling*/
+@media (max-width: 767.98px) {
+  /* Hide volume slider container */
+  .slider_container {
+    display: none;
+  }
+
+  /* Stack the seek bar on its own row */
+  .seeking {
+    width: 100%;
+    padding-top: 4px;
+    justify-content: space-between;
+  }
+
+  .marquee-outer {
+    flex: 1;
+    max-width: calc(100% - 137px);
+    }
+
+  /* Optional: reduce spacing/padding */
+  #musicplayer {
+    flex-wrap: wrap;
+    height: auto; /* let height adjust to stacked layout */
+  }
 }
