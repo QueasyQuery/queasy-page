@@ -17,7 +17,7 @@ body {
   background-size: 100% 100%;
   background-attachment: fixed;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: 'JetBrains', monospace;
   image-rendering: pixelated;
   -webkit-text-size-adjust: 100%;
 }
@@ -189,6 +189,11 @@ div:hover .ploink {
   overflow: hidden;
 }
 
+.sidebar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+}
+
 /* Collapsed state */
 .sidebar.sidebar-collapsed {
   width: 50px;
@@ -222,6 +227,16 @@ div:hover .ploink {
   transition: all 0.3s ease;
   opacity: 1;
   visibility: visible;
+}
+
+.sb-icon {
+  padding-left: 24px;
+  padding-right: 0px;
+}
+
+.sidebar img {
+  width: 50px;
+  height: auto;
 }
 
 /* Hidden state */
