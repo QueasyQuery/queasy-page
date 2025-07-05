@@ -244,9 +244,19 @@ div:hover .ploink {
   left: 10px;
 }
 
-.sidebar-collapsed:hover .sidebar-content .post-title {
+.sidebar-collapsed .sidebar-content .post-title {
   padding-left: 45px;
 }
+
+@media (max-width: 768px) {.sidebar {bottom: 98px;}}
+@media (max-width: 1080px) {
+  .sidebar {
+    width: calc((100%) - 48px);
+    height: 75%;
+    background-image: linear-gradient(-45deg, #96b6e8,rgba(144, 178, 144, 1));
+  }
+}
+
 
 /* Under Construction */
 .construction {
