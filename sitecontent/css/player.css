@@ -2,10 +2,10 @@
 /*font*/
 @font-face {
 font-family: 'JetBrains';
-src: url('/fonts/JetBrainsMono.ttf');
+src: url('fonts/JetBrainsMono.ttf');
 }
 
-#musicplayer{ 
+#musicplayer { 
     font-family: 'JetBrains', monospace;
     font-weight:bold;
     height:37px;

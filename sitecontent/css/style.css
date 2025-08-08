@@ -8,12 +8,12 @@
 /*font*/
 @font-face {
 font-family: 'JetBrains';
-src: url('/fonts/JetBrainsMono.ttf');
+src: url('fonts/JetBrainsMono.ttf');
 }
 
 /* Background image styling */
 body {
-  background-image: linear-gradient(-45deg, #00173c,#002c00);
+  background-image: linear-gradient(-45deg, #001332,#000000,#002200);
   background-size: 100% 100%;
   background-attachment: fixed;
   height: 100vh;
@@ -130,7 +130,7 @@ body {
   max-height: 0px;
 }
 
-div:hover .ploink {
+.ploink-hitbox:hover .ploink {
   animation: ploink 0.2s ease;
 }
 
@@ -176,11 +176,10 @@ div:hover .ploink {
 
 .sidebar {
   position: fixed;
-  bottom: 61px;
-  left: 24px;
   background-image: linear-gradient(-45deg, #96b6e8d7,rgba(144, 178, 144, 0.875));
   width: calc((100% - 768px)/2 - 36px);
   height: 50%;
+  bottom: 61px;
   min-width: 50px;
   min-height: 50px;
   z-index: 10;
@@ -189,10 +188,11 @@ div:hover .ploink {
   overflow: hidden;
 }
 
-.sidebar-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-}
+.sidebar-grid {display: grid;grid-template-columns: repeat(auto-fill, 100px);}
+.sidebar-grid-stamps {display: grid;grid-template-columns: repeat(auto-fill, 150px);}
+
+.sb-left {left: 24px;}
+.sb-right {right: 24px;}
 
 /* Collapsed state */
 .sidebar.sidebar-collapsed {
@@ -239,6 +239,11 @@ div:hover .ploink {
   height: auto;
 }
 
+.stamp img {
+  width: 115px;
+  height: auto;
+}
+
 /* Hidden state */
 .sidebar-collapsed .sidebar-content {
   opacity: 0;
@@ -251,17 +256,13 @@ div:hover .ploink {
   visibility: visible;
 }
 
-.sidebar-collapsed:hover {
-  width: 155px;
-}
+.sidebar-collapsed:hover {width: 155px;}
 
-.sidebar-collapsed .sidebar-toggle-btn {
-  left: 10px;
-}
+.sidebar-collapsed.sb-left  .sidebar-toggle-btn {left:  10px;}
+.sidebar-collapsed.sb-right .sidebar-toggle-btn {right: 10px;}
 
-.sidebar-collapsed .sidebar-content .post-title {
-  padding-left: 45px;
-}
+.sidebar-collapsed.sb-left  .sidebar-content .post-title {padding-left:  45px;}
+.sidebar-collapsed.sb-right .sidebar-content .post-title {padding-right: 45px;}
 
 @media (max-width: 768px) {.sidebar {bottom: 98px;}}
 @media (max-width: 1080px) {
@@ -281,5 +282,5 @@ div:hover .ploink {
   right: calc(50% - 130px);
   border-radius: 0px 0px 8px 8px;
   text-align: center;
+  z-index: 999;
 }
-

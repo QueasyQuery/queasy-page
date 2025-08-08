@@ -81,39 +81,40 @@ function toggleRowContent(row, button, blogDivs) {
 // SIDEBAR
 
 function initializeSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  // Skip if already initialized
-  if (sidebar.classList.contains('sidebar-initialized')) return;
-  
-  // Mark as initialized
-  sidebar.classList.add('sidebar-initialized');
-  
-  // Create toggle button
-  const button = document.createElement('button');
-  button.className = 'sidebar-toggle-btn';
-  button.innerHTML = '☰'; // Hamburger menu icon
-  button.setAttribute('aria-label', 'Toggle sidebar');
-  
-  // Create wrapper for collapsible content
-  const wrapper = document.createElement('div');
-  wrapper.className = 'sidebar-content';
-  
-  // Move all existing content into wrapper
-  const children = Array.from(sidebar.children);
-  children.forEach(child => {
-    wrapper.appendChild(child);
-  });
-  
-  // Add button and wrapper back to sidebar
-  sidebar.appendChild(button);
-  sidebar.appendChild(wrapper);
-  
-  // Start collapsed
-  sidebar.classList.add('sidebar-collapsed');
-  
-  // Add click handler
-  button.addEventListener('click', function() {
-    toggleSidebar(sidebar, button, wrapper);
+  document.querySelectorAll('.sidebar').forEach(sidebar => {
+    // Skip if already initialized
+    if (sidebar.classList.contains('sidebar-initialized')) return;
+    
+    // Mark as initialized
+    sidebar.classList.add('sidebar-initialized');
+    
+    // Create toggle button
+    const button = document.createElement('button');
+    button.className = 'sidebar-toggle-btn';
+    button.innerHTML = sidebar.dataset.icon; // icon
+    button.setAttribute('aria-label', 'Toggle sidebar');
+    
+    // Create wrapper for collapsible content
+    const wrapper = document.createElement('div');
+    wrapper.className = 'sidebar-content';
+    
+    // Move all existing content into wrapper
+    const children = Array.from(sidebar.children);
+    children.forEach(child => {
+      wrapper.appendChild(child);
+    });
+    
+    // Add button and wrapper back to sidebar
+    sidebar.appendChild(button);
+    sidebar.appendChild(wrapper);
+    
+    // Start collapsed
+    sidebar.classList.add('sidebar-collapsed');
+    
+    // Add click handler
+    button.addEventListener('click', function() {
+      toggleSidebar(sidebar, button, wrapper);
+    });
   });
 }
 
@@ -132,6 +133,6 @@ function toggleSidebar(sidebar, button, wrapper) {
     // Remove inline styles to let CSS handle it
     wrapper.style.opacity = '';
     wrapper.style.visibility = '';
-    button.innerHTML = '☰';
+    button.innerHTML = sidebar.dataset.icon;
   }
 }

@@ -108,8 +108,6 @@ let lastSeekPosition = -1;
 function seekUpdate() {
   if (!isNaN(curr_track.duration)) {
     let seekPosition = curr_track.currentTime * (100 / curr_track.duration);
-
-    if (Math.abs(seekPosition - lastSeekPosition) > 0.5) { // update only if changed enough
       seek_slider.value = seekPosition;
       lastSeekPosition = seekPosition;
 
@@ -123,7 +121,6 @@ function seekUpdate() {
 
       curr_time.textContent = `${currentMinutes}:${currentSeconds}`;
       total_duration.textContent = `${durationMinutes}:${durationSeconds}`;
-    }
   }
 }
 

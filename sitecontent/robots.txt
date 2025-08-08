@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /
+
+# Hi! You don't seem to be a robot?
+
+# ...
+# ...
+# ...
+
+# Are you looking for something?
+
+# ...
+
+# Maybe try going to the text file meant for you!
