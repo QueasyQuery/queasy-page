@@ -38,7 +38,11 @@ src: url('fonts/JetBrainsMono.ttf');
     text-decoration:none;
     filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)  drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);
 }
- 
+
+.slider_container i {
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)  drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);
+}
+
 .controls td{
     padding-top:5px; /* padding around controls */
 }

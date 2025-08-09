@@ -14,6 +14,12 @@ let updateTimer;
 let cover_folder = 'images/covers/';
 let curr_track = document.getElementById("music");
 
+// Run on start
+setTimeout(() => { playpauseTrack(); }, 1500);
+document.addEventListener("keydown", function(event) {
+  if (event.code === "Space") {event.preventDefault(); playpauseTrack()
+  }});
+
 // Song list
 let track_list = [
   {name: "HEAT ABNORMAL - Iyowa (Shannon Remix)",path: "https://qalc.s-ul.eu/RFWtMerN",img:"shannon.png"},
