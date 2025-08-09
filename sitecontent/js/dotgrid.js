@@ -81,7 +81,7 @@ class dotGrid {
         this.canvas.arc(
           x + (x - this.mouseX) / dist * gridSize - oscillation,
           y + (y - this.mouseY) / dist * gridSize - oscillation,
-          Math.abs(size + oscillation/(sizeoscill)),0,2*Math.PI,true
+          Math.abs(size + oscillation/(2*sizeoscill)),0,2*Math.PI,true
         );
         this.canvas.fillStyle = "white";
         this.canvas.fill();
@@ -89,7 +89,7 @@ class dotGrid {
     }
   }
 
-  // Grabs mouse position, checks if the mouse is off the screen (NaN) and calculates the distance from the mouse pointer and each dot using the pythagorean theorem.
+  // calculates distance from mouse and each dot
   pythag(ellipseX, ellipseY, mouseX, mouseY) {
     let x = mouseX;
     let y = mouseY;

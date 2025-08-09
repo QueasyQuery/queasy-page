@@ -11,6 +11,12 @@ font-family: 'JetBrains';
 src: url('fonts/JetBrainsMono.ttf');
 }
 
+:root {
+  --box-green: rgba(144, 178, 144, 0.3);
+  --box-blue: rgba(150,182,232,0.3);
+  --box-white: #ffffff39;
+}
+
 /* Background image styling */
 body {
   background-image: linear-gradient(-45deg, #001332,#000000,#002200);
@@ -53,28 +59,28 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(-45deg, rgba(150,182,232,0.3),rgba(144, 178, 144, 0.3));
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(-45deg, var(--box-blue),var(--box-green));
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px); 
 }
 
 .post-title {
-  background-color: #ffffff39;
+  background-color: var(--box-white);
   padding: 12px;
   padding-left: 12px;
   margin-left: -12px;
   margin-right: -12px;
   border-radius: 8px 8px 0px 0px;
-  text-shadow: 0px 0px 20px #0000008e;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 }
 
 .blog-content p {
-  color: #fff;
+  color: white;
   padding: 12px;
   padding-top: 20px;
   padding-bottom: 20px;
-  text-shadow: 0px 0px 10px #0000008e;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 /*Link breaking*/
@@ -151,6 +157,39 @@ body {
   border-radius: 8px 8px 0px 0px;
 }
 
+/* project tiles*/
+.project {
+  overflow: hidden; 
+  border-radius: 8px;
+}
+
+.project img {
+  width: 100%;
+  transition: transform 0.3s ease,filter 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.2);
+  filter:blur(2px);
+}
+
+.project .text {
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size:x-large;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color:white;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.project:hover .text {opacity: 1;}
+
 @media (max-width: 767.98px) {
   .main-container {width: 100%;}
   .stuffimg .blog-content   {border-radius: 0px;}
@@ -183,8 +222,9 @@ body {
 
 .sidebar {
   position: fixed;
-  background-image: linear-gradient(-45deg, #96b6e8d7,rgba(144, 178, 144, 0.875));
+  background-image: linear-gradient(-45deg, var(--box-blue),var(--box-green));
   width: calc((100% - 768px)/2 - 36px);
+  color: white;
   height: 50%;
   bottom: 61px;
   min-width: 50px;

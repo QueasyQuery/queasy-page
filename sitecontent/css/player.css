@@ -8,8 +8,6 @@ src: url('fonts/JetBrainsMono.ttf');
 #musicplayer { 
     font-family: 'JetBrains', monospace;
     font-weight:bold;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     height:37px;
     width:100%;
     left:0;
@@ -52,6 +50,8 @@ src: url('fonts/JetBrainsMono.ttf');
 .seeking{
     height: 37px;
     width:75%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     background: transparent;/* background color of seeking bar */
     display:flex;
     justify-content: space-evenly;
