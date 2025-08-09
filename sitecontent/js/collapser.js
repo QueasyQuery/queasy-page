@@ -56,22 +56,78 @@ function toggleRowContent(row, button, blogDivs) {
   const isCollapsed = row.classList.contains('collapsed');
   
   if (isCollapsed) {
-    // Expand all blog-content divs in this row
+    // Expand
     row.classList.remove('collapsed');
     blogDivs.forEach(function(div) {
       const wrapper = div.querySelector('.collapsible-content');
       if (wrapper) {
-        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+        // Temporarily remove transition to measure height
+        const originalTransition = wrapper.style.transition;
+        wrapper.style.transition = 'none';
+        wrapper.style.maxHeight = 'none';
+        
+        const waitForImagesAndAnimate = () => {
+          // Wait for images to load
+          const images = wrapper.querySelectorAll('img');
+          if (images.length > 0) {
+            let loadedCount = 0;
+            const totalImages = images.length;
+            
+            const startAnimation = () => {
+              loadedCount++;
+              if (loadedCount === totalImages) {
+                // All images loaded, now animate
+                requestAnimationFrame(() => {
+                  const targetHeight = wrapper.scrollHeight;
+                  
+                  // Reset to 0 and restore transition
+                  wrapper.style.maxHeight = '0px';
+                  wrapper.style.transition = originalTransition;
+                  
+                  // Trigger animation
+                  requestAnimationFrame(() => {
+                    wrapper.style.maxHeight = targetHeight + 'px';
+                  });
+                });
+              }
+            };
+            
+            images.forEach(img => {
+              if (img.complete) {
+                startAnimation();
+              } else {
+                img.addEventListener('load', startAnimation, { once: true });
+                img.addEventListener('error', startAnimation, { once: true });
+              }
+            });
+          } else {
+            // No images, animate immediately
+            requestAnimationFrame(() => {
+              const targetHeight = wrapper.scrollHeight;
+              wrapper.style.maxHeight = '0px';
+              wrapper.style.transition = originalTransition;
+              
+              requestAnimationFrame(() => {
+                wrapper.style.maxHeight = targetHeight + 'px';
+              });
+            });
+          }
+        };
+        
+        waitForImagesAndAnimate();
       }
     });
     button.innerHTML = '−';
   } else {
-    // Collapse all blog-content divs in this row
+    // Collapse (this part stays the same)
     row.classList.add('collapsed');
     blogDivs.forEach(function(div) {
       const wrapper = div.querySelector('.collapsible-content');
       if (wrapper) {
-        wrapper.style.maxHeight = '0px';
+        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          wrapper.style.maxHeight = '0px';
+        });
       }
     });
     button.innerHTML = '+';

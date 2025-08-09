@@ -81,7 +81,7 @@ class dotGrid {
         this.canvas.arc(
           x + (x - this.mouseX) / dist * gridSize - oscillation,
           y + (y - this.mouseY) / dist * gridSize - oscillation,
-          Math.max(0,size + oscillation/(sizeoscill)),0,2*Math.PI,true
+          Math.abs(size + oscillation/(sizeoscill)),0,2*Math.PI,true
         );
         this.canvas.fillStyle = "white";
         this.canvas.fill();

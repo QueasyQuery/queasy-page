@@ -50,6 +50,10 @@ body {
 /* Blog content styling */
 .blog-content {
   border-radius: 8px;
+  /* border: 2px solid transparent;
+  border-image: linear-gradient(-45deg,#99b7e8d7,rgba(152, 181, 152, 0.875));
+  border-image-slice: 1; */
+  
   position: relative;
   width: 100%;
   height: 100%;
@@ -205,8 +209,8 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 15, 91, 0.355);
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 4px;
   width: 30px;
   height: 30px;
@@ -218,9 +222,7 @@ body {
   color: white;
 }
 
-.sidebar-toggle-btn:hover {
-  background: rgba(0, 0, 0, 0.4);
-}
+.sidebar-toggle-btn:hover {background: rgba(0, 0, 0, 0.4);}
 
 /* Sidebar content wrapper */
 .sidebar-content {
