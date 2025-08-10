@@ -159,8 +159,16 @@ body {
 
 /* project tiles*/
 .project {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   overflow: hidden; 
   border-radius: 8px;
+  
+}
+
+.project :not(.blog-content) {
+  margin-bottom: 12;
 }
 
 .project img {
@@ -195,7 +203,6 @@ body {
   .stuffimg .blog-content   {border-radius: 0px;}
   .stuffimg .top-content    {border-radius: 8px 8px 0px 0px;}
   .stuffimg .bottom-content {border-radius: 0px 0px 8px 8px;}
-  .project {padding-bottom: 12px;}
 }
 
 @keyframes ploink {
@@ -316,7 +323,6 @@ body {
   .sidebar {
     width: calc((100%) - 48px);
     height: 75%;
-    background-image: linear-gradient(-45deg, #96b6e8,rgba(144, 178, 144, 1));
   }
 }
 
