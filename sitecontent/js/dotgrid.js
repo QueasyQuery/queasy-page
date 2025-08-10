@@ -8,8 +8,8 @@ class dotGrid {
     this.dpr = window.devicePixelRatio || 1;
 
     this.drawable = this.canvasElement.getBoundingClientRect();
-    this.drawable.width *= 1.4;
-    this.drawable.height *= 1.4;
+    this.drawable.width *= 1.1;
+    this.drawable.height *= 1.1;
 
     this.canvasWidth = this.drawable.width * this.dpr;
     this.canvasHeight = this.drawable.height * this.dpr;
@@ -26,15 +26,16 @@ class dotGrid {
     this.speed = 0.01;
 
     // Setup Canvas
+    this.fps = 30
     this.canvas = this.canvasElement.getContext("2d");
     this.canvas.scale(this.dpr, this.dpr);
-    this.animate();
+    this.animate(1);
   }
 
   onMouseUpdate(e) {
     if (this.onMobile) {return;}
-    this.mouseX = (e.pageX - this.drawable.left) * 1.4;
-    this.mouseY = (e.pageY - this.scrollY - this.drawable.top) * 1.4;
+    this.mouseX = (e.pageX - this.drawable.left) * 1.1;
+    this.mouseY = (e.pageY - this.scrollY - this.drawable.top) * 1.1;
   }
 
   OnScrollUpdate() {
@@ -44,7 +45,7 @@ class dotGrid {
 
   animate() {
     this.draw();
-    requestAnimationFrame(this.animate.bind(this));
+    setTimeout(this.animate.bind(this), 1000 / this.fps);
   }
 
   init() {

@@ -233,6 +233,8 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
   overflow: hidden;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); 
 }
 
 .sidebar-grid {display: grid;grid-template-columns: repeat(auto-fill, 100px);}
