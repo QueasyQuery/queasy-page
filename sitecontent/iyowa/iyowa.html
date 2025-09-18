@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Iyowa Shrine</title>
+    <link rel="icon" href="Q.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#101010] text-white">
+    
+    <!--Credit-->
+    <div class="fixed top-5 right-5 z-51 text-white">
+      Made by <a>QueasyQuery</a>
+    </div>
+
+    <!--Top Navbar-->
+    <div class="fixed top-5 left-5 right-5 z-50 bg-[#101010] border border-white mx-auto rounded-md shadow-md">
+      <nav class="flex justify-center space-x-8 sm:space-x-20 py-3 text-white font-bold tracking-widest text-sm">
+        <a href="#about"       class="hover:text-[#FFCCFF] transition-colors">ABOUT</a>
+        <a href="#discography" class="hover:text-[#FFCCFF] transition-colors">DISCOGRAPHY</a>
+        <a href="#art"         class="hover:text-[#FFCCFF] transition-colors">ART</a>
+        <a href="#other"       class="hover:text-[#FFCCFF] transition-colors">OTHER</a>
+      </nav>
+    </div>
+
+    <!--Title-->
+    <section class="bg-[url('images/placeholder-bg.jpg')] bg-cover">
+    <div class="pt-72 pb-80 flex justify-center items-center">
+      <span class="font-bold font-['MonoManiac'] text-white text-9xl">IYOWA</span>
+    </div>
+    </section>
+    <!--About-->
+    <section id="about" class="relative mt-12 bg-[#101010] bg-center py-12 px-6">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        <img src="images/placeholder.png" alt="Iyowa's profile picture" class="w-48 h-48 object-cover rounded-full border-4 border-[#FFCCFF]">
+        <div>
+          <h3 class="text-6xl font-extrabold mb-4 text-[#FFCCFF] tracking-wide">About Iyowa</h3>
+          <p class="text-m leading-relaxed text-white/90">
+            Iyowa is a vocaloid producer and illustrator, most known for Kyu-Kurarin and Heat Abnormal, among many other popular songs,
+            has been writing and producing an experimental tone unique in the vocaloid scene since 2018. Iyowa's songs are usually characterized by fast paced vocals, hectic drums and strategic use of harmonic dissonance. 
+            The fast paced elements and anxiety-simulating tonal use causes, for me, a feeling of running away from something to prevail when 
+            listening to Iyowa's discography. That's why you'll see a little character running on the beat when you play a song at the bottom of the page!
+            <br><br>
+            I love Iyowa's art, both music and illustration. That's why I made this Shrine! After finding his art through Heat Abnormal in 2024, I quickly got hooked on
+            and inspired by his style as nothing I'd heard before came close to the feeling it gave me. The fact that he writes, produces and illustrates his own
+            videos all himself is a feat all by itself that I aspire to achieve.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discography -->
+    <section id="discography" class="mt-16 px-6">
+      <h3 class="text-2xl font-extrabold text-[#FFCCFF] mb-6">Discography</h3>
+      <div class="flex space-x-6 overflow-x-auto pb-4">
+        <!-- Album Card -->
+        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
+          <h4 class="text-lg">Sleeping Pink Noise</h4>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>Song 1</li>
+            <li>Song 2</li>
+          </ul>
+        </div>
+        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
+          <h4 class="text-lg">Watashi no Heritage</h4>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>Song 1</li>
+            <li>Song 2</li>
+          </ul>
+        </div>
+        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
+          <h4 class="text-lg">Films, Sunny Spots, Graduations</h4>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>Song 1</li>
+          </ul>
+        </div>
+        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
+          <h4 class="text-lg">Singles</h4>
+          <ul class="text-sm mt-2 space-y-1">
+            <li>Song 1</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Art -->
+    <section  id="art" class="mt-16 px-6">
+      <h3 class="text-2xl font-extrabold text-[#FFCCFF] mb-6">Art</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="aspect-square bg-[url('images/placeholder.png')] bg-cover bg-center rounded-lg cursor-pointer hover:scale-105 transition-transform"></div>
+        <div class="aspect-square bg-[url('images/placeholder.png')] bg-cover bg-center rounded-lg cursor-pointer hover:scale-105 transition-transform"></div>
+        <div class="aspect-square bg-[url('images/placeholder.png')] bg-cover bg-center rounded-lg cursor-pointer hover:scale-105 transition-transform"></div>
+        <div class="aspect-square bg-[url('images/placeholder.png')] bg-cover bg-center rounded-lg cursor-pointer hover:scale-105 transition-transform"></div>
+      </div>
+    </section>
+
+    <!-- Other -->
+    <section  id="other" class="mt-16 px-6 mb-32">
+      <h3 class="text-2xl font-extrabold text-[#FFCCFF] mb-4">Other</h3>
+      <p class="text-sm text-white/80">...</p>
+    </section>
+
+    <!-- Bottom Navbar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-[#101010] border-t-2 border-white flex justify-between items-center text-xs text-white font-bold p-3">
+      <div class="flex-1">Song wheel</div>
+      <div class="flex-1 text-center">▶Player Info</div>
+      <div class="flex-1 text-right">YT Player</div>
+    </div>
+
+  </body>
+</html>

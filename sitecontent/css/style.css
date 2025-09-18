@@ -31,7 +31,7 @@ body {
 /* Center container styling */
 .main-container {
   /* background-color: rgba(0, 0, 0, 0.279); */
-  width: 768px; /* Limit on desktop */
+  max-width: 768px; /* Limit on desktop */
   align-items: center;
   margin: 0 auto;
   margin-top: 50px;
@@ -199,7 +199,7 @@ body {
 .project:hover .text {opacity: 1;}
 
 @media (max-width: 767.98px) {
-  .main-container {width: 100%;}
+
   .stuffimg .blog-content   {border-radius: 0px;}
   .stuffimg .top-content    {border-radius: 8px 8px 0px 0px;}
   .stuffimg .bottom-content {border-radius: 0px 0px 8px 8px;}

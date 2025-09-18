@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+font-family: 'kusukusuame';
+src: url('fonts/kusukusuame-Regular.otf');
+font-feature-settings:"liga" 0;
+}
+
+@font-face {
+    font-family: 'MonoManiac';
+    src: url('fonts/MonomaniacOne-Regular.ttf');
+}
+
+body {font-family: 'kusukusuame'}
