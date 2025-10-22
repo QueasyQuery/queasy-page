@@ -245,6 +245,8 @@ body {
 }
 
 .sidebar-grid {display: grid;grid-template-columns: repeat(auto-fill, 100px);}
+.sidebar-grid a {margin-left:5px; text-decoration: none; color: white;}
+.sidebar-grid a:hover { background-color: #ffffff20;}
 .sidebar-grid-stamps {display: grid;grid-template-columns: repeat(auto-fill, 150px);}
 
 .sb-left {left: 24px;}
