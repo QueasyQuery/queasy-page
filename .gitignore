@@ -1,1 +1,11 @@
+# personal
 todo.txt
+
+# tailwind
+package-lock.json
+package.json
+tailwind.config.js
+node_modules/
+
+#csv management
+csv/

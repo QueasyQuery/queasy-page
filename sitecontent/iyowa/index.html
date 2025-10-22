@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Iyowa Shrine</title>
-    <link rel="icon" href="Q.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css" href="input.css">
+    <link rel="icon" href="images/iyowa.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -13,12 +12,12 @@
   <body class="bg-[#101010] text-white">
     
     <!--Credit-->
-    <div class="fixed top-5 right-5 z-51 text-white">
-      Made by <a>QueasyQuery</a>
+    <div class="fixed top-5 right-[28px] z-50 text-[#808080] text-sm">
+      <span> Made by <a>QueasyQuery</a> </span>
     </div>
 
     <!--Top Navbar-->
-    <div class="fixed top-5 left-5 right-5 z-50 bg-[#101010] border border-white mx-auto rounded-md shadow-md">
+    <div class="fixed top-5 left-5 right-5 z-40 bg-[#101010] border border-white mx-auto rounded-md shadow-md">
       <nav class="flex justify-center space-x-8 sm:space-x-20 py-3 text-white font-bold tracking-widest text-sm">
         <a href="#about"       class="hover:text-[#FFCCFF] transition-colors">ABOUT</a>
         <a href="#discography" class="hover:text-[#FFCCFF] transition-colors">DISCOGRAPHY</a>
@@ -27,17 +26,11 @@
       </nav>
     </div>
 
-    <!--Title-->
-    <section class="bg-[url('images/placeholder-bg.jpg')] bg-cover">
-    <div class="pt-72 pb-80 flex justify-center items-center">
-      <span class="font-bold font-['MonoManiac'] text-white text-9xl">IYOWA</span>
-    </div>
-    </section>
     <!--About-->
-    <section id="about" class="relative mt-12 bg-[#101010] bg-center py-12 px-6">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+    <section id="about" class="flex-y relative py-40 px-6 bg-[url('images/placeholder-bg.jpg')] bg-cover min-h-[100vh]">
+      <div class="max-w-4xl mx-auto p-10 flex flex-col md:flex-row items-center gap-8 bg-[#101010] border border-white mx-auto rounded-md shadow-md">
         <img src="images/placeholder.png" alt="Iyowa's profile picture" class="w-48 h-48 object-cover rounded-full border-4 border-[#FFCCFF]">
-        <div>
+        <div class="">
           <h3 class="text-6xl font-extrabold mb-4 text-[#FFCCFF] tracking-wide">About Iyowa</h3>
           <p class="text-m leading-relaxed text-white/90">
             Iyowa is a vocaloid producer and illustrator, most known for Kyu-Kurarin and Heat Abnormal, among many other popular songs,
@@ -56,34 +49,15 @@
     <!-- Discography -->
     <section id="discography" class="mt-16 px-6">
       <h3 class="text-2xl font-extrabold text-[#FFCCFF] mb-6">Discography</h3>
-      <div class="flex space-x-6 overflow-x-auto pb-4">
-        <!-- Album Card -->
-        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
-          <h4 class="text-lg">Sleeping Pink Noise</h4>
-          <ul class="text-sm mt-2 space-y-1">
-            <li>Song 1</li>
-            <li>Song 2</li>
-          </ul>
-        </div>
-        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
-          <h4 class="text-lg">Watashi no Heritage</h4>
-          <ul class="text-sm mt-2 space-y-1">
-            <li>Song 1</li>
-            <li>Song 2</li>
-          </ul>
-        </div>
-        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
-          <h4 class="text-lg">Films, Sunny Spots, Graduations</h4>
-          <ul class="text-sm mt-2 space-y-1">
-            <li>Song 1</li>
-          </ul>
-        </div>
-        <div class="min-w-[220px] bg-[url('images/placeholder.png')] bg-cover bg-center rounded-xl border-2 border-[#FFCCFF] shadow-md flex flex-col justify-end p-4 text-[#101010] font-bold bg-blend-multiply bg-white/80">
-          <h4 class="text-lg">Singles</h4>
-          <ul class="text-sm mt-2 space-y-1">
-            <li>Song 1</li>
-          </ul>
-        </div>
+      <div class="space-x-6 align-top h-[400px] overflow-y-hidden overflow-x-scroll">
+        <!-- Album Cards -->
+        <div class="album-card"><h4 class="">Sleeping Pink Noise</h4></div>
+        <div class="album-card"><h4 class="">Watashi no Heritage</h4></div>
+        <div class="album-card"><h4 class="">Films, Sunny Spots, Graduations</h4></div>
+        <div class="album-card"><h4 class="">Singles</h4></div>
+        <div class="album-card"><h4 class="">Singles</h4></div>
+        <div class="album-card"><h4 class="">Singles</h4></div>
+        <div class="album-card"><h4 class="">Singles</h4></div>
       </div>
     </section>
 
@@ -105,11 +79,24 @@
     </section>
 
     <!-- Bottom Navbar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-[#101010] border-t-2 border-white flex justify-between items-center text-xs text-white font-bold p-3">
-      <div class="flex-1">Song wheel</div>
-      <div class="flex-1 text-center">▶Player Info</div>
+    <div class="fixed bottom-0 left-0 right-0 bg-[#101010] border-t-2 border-white flex justify-between items-center text-xs text-white font-bold p-3 z-50">
+      <div class="flex-1">
+        <span id="name-display">Song Selection</span>
+      </div>
+      <div class="flex-1 text-center">Player Info</div>
       <div class="flex-1 text-right">YT Player</div>
     </div>
+    <!--Song Wheel-->
+    <div class="fixed justify-between items-center bottom-10 left-0 pt-[200px] pr-[200px] z-0">
+          <div class="wheel absolute inset-0 h-[60px] pt-[140px] pr-[200px]"></div>
+    </div>
 
+    <!--Player-->
+    <div class="fixed flex right-0 bottom-10 z-50 w-[50vw] h-[29vw] sm:h-[210px] sm:w-[360px] bg-black border-2 border-white border-r-0">
+      <div id="player" class="h-[29vw] sm:h-[210px] sm:w-[360px] bg-black"></div>
+    </div>  
   </body>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="js/data.js"></script>
+  <script src="js/wheel.js?v0.1"></script>
 </html>
