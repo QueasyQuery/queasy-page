@@ -22,9 +22,9 @@ document.addEventListener("keydown", function(event) {
 
 // Song list
 let track_list = [
-  {name: "HEAT ABNORMAL - Iyowa (Shannon Remix)",path: "https://qalc.s-ul.eu/RFWtMerN",img:"shannon.png"},
-  {name: "HEAT ABNORMAL - Iyowa (Suisoh Cover)",path: "https://qalc.s-ul.eu/NeLbYv8C",img:"suisoh.png"},
-  {name: "Cadmium Colors - Jamie Paige",path: "https://qalc.s-ul.eu/6Rah9pSO",img:"cadmium.png"}
+  {name: "HEAT ABNORMAL - Iyowa (Shannon Remix)",path: "https://qalc.s-ul.eu/7KpUjANH",img:"shannon.png"},
+  {name: "HEAT ABNORMAL - Iyowa (Suisoh Cover)",path: "https://qalc.s-ul.eu/WIDkYthc",img:"suisoh.png"},
+  {name: "CADMIUM COLORS - Jamie Paige",path: "https://qalc.s-ul.eu/4KHpaE47",img:"cadmium.png"}
 ];
 
 // Default volume
