@@ -1,10 +1,3 @@
-/* Basic CSS reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /*font*/
 @font-face {
 font-family: 'JetBrains';
@@ -82,6 +75,9 @@ body {
   padding-bottom: 20px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
+
+
+
 
 /*Link breaking*/
 .blog-content a {
@@ -199,7 +195,7 @@ body {
 .project:hover .text {opacity: 1;}
 
 @media (max-width: 767.98px) {
-
+  .post-content {font-size: 14px;}
   .stuffimg .blog-content   {border-radius: 0px;}
   .stuffimg .top-content    {border-radius: 8px 8px 0px 0px;}
   .stuffimg .bottom-content {border-radius: 0px 0px 8px 8px;}

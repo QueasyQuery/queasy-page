@@ -26,6 +26,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '360',
     width: '640',
+    referrerpolicy: 'strict-origin-when-cross-origin',
     videoId: '',
     events: {
       'onReady': function() {RandomSong()}
