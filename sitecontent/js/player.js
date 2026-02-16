@@ -1,5 +1,6 @@
 let track_name = document.querySelector(".songtitle");
 let track_cover = document.querySelector(".album-cover");
+let track_link = document.querySelector(".album-link");
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
 let prev_btn = document.querySelector(".prev-track");
@@ -15,16 +16,19 @@ let cover_folder = 'images/covers/';
 let curr_track = document.getElementById("music");
 
 // Run on start
-setTimeout(() => { playpauseTrack(); }, 1500);
+setTimeout(() => { playpauseTrack(); }, 1000);
 document.addEventListener("keydown", function(event) {
   if (event.code === "Space") {event.preventDefault(); playpauseTrack()
   }});
 
 // Song list
 let track_list = [
-  {name: "HEAT ABNORMAL - Iyowa (Shannon Remix)",path: "https://qalc.s-ul.eu/7KpUjANH",img:"shannon.png"},
-  {name: "HEAT ABNORMAL - Iyowa (Suisoh Cover)",path: "https://qalc.s-ul.eu/WIDkYthc",img:"suisoh.png"},
-  {name: "CADMIUM COLORS - Jamie Paige",path: "https://qalc.s-ul.eu/4KHpaE47",img:"cadmium.png"}
+  {name: "RINGTONE - Jamie Paige",path: "https://qalc.s-ul.eu/I31qh0H0",img:"ringtone.png", link: "https://jamiepaige.bandcamp.com/track/ringtone"},
+  {name: "HEAT ABNORMAL - Iyowa (Shannon Remix)",path: "https://qalc.s-ul.eu/7KpUjANH",img:"shannon.png", link: "https://youtu.be/uvE93fKltmY"},
+  {name: "WINRAR - AQUASINE",path: "https://qalc.s-ul.eu/zFgqCNyJ",img:"winrar.png", link: "https://youtu.be/hOng39K6KIM"},
+  {name: "CADMIUM COLORS - Jamie Paige",path: "https://qalc.s-ul.eu/4KHpaE47",img:"cadmium.png", link: "https://youtu.be/1U6qefKcOrg"},
+  {name: "I LOVE BEING PART OF THE ECONOMY, IT'S WHAT I WAS BORN TO DO - 3xBlast",path: "https://qalc.s-ul.eu/oW9TUByM",img:"economy.png", link: "https://youtu.be/RDtaLeU_FK0"},
+  {name: "HEAT ABNORMAL - Iyowa (Suisoh Cover)",path: "https://qalc.s-ul.eu/EvxnHrNF",img:"suisoh.png", link: "https://youtu.be/Kc0-AC3sUKc"}
 ];
 
 // Default volume
@@ -47,6 +51,9 @@ function loadTrack(index) {
   // Set album cover image source
   track_cover.src = cover_folder+track_list[index].img;
   track_cover.alt = `Album cover for ${track_list[index].name}`;
+
+  // set link
+  track_link.href = track_list[index].link;
 
   // Remove previous ended event listener to avoid duplicates
   curr_track.removeEventListener("ended", nextTrack);
